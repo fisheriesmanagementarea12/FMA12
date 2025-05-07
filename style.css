@@ -1,0 +1,1758 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; 
+    width: 100%;
+}
+
+/* Ensure navbar stays fixed at the top */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 98.9%;
+    z-index: 1030;
+    padding: 5px 0; 
+    background: linear-gradient(135deg, #018ABE, #02457A) !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px; 
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Prevent content from being hidden under the navbar */
+body {
+    padding-top: 40px;
+}
+
+.navbar-nav {
+    margin: auto;
+    margin-left: -20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Prevent submenu from blocking sibling dropdowns */
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1050;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    pointer-events: none; 
+}
+
+/* Show dropdown on hover */
+.navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+    pointer-events: auto;
+}
+
+/* Ensure dropdown menus have proper styling */
+.dropdown-menu {
+    min-width: 220px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+    border: 1px solid #ddd;
+}
+
+/* Dropdown links styling */
+.dropdown-menu .dropdown-item {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #333;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #001b48;
+    color: white;
+}
+
+.navbar-nav .dropdown-menu {
+    border-top: 3px solid #001b48;
+    overflow: visible;
+}
+
+/* Increase hover area to prevent flickering */
+.dropdown-menu, .dropdown-menu {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Navbar link styles */
+.nav-link {
+    color: black !important;
+    font-weight: 600;
+    text-shadow: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header after NavBar */
+.header-section {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    background-color: #fff;
+}
+
+.logo1 {
+    width: 100%;
+    height: auto;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text p {
+    margin: 0;
+}
+
+.text-philippines {
+    font-size: 16px;
+    color: black;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.text-department {
+    font-size: 18px;
+    color: #008037;
+    font-family: "Garamond", serif;
+}
+
+.text-bfar {
+    font-size: 20px;
+    color: #0071BB;
+    font-family: "Georgia", serif;
+    font-weight: bold;
+}
+
+.text-address {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 14px;
+    color: gray;
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+    .header-text {
+        text-align: left;
+    }
+}
+
+/* Hero section styling */
+#hero {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 80px); 
+    overflow: hidden;
+    margin-top: 0;  
+    padding: 0;
+}
+
+/* Make carousel images cover the entire section */
+#hero .carousel-item {
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    height: 100vh;
+}
+
+/* Ensure carousel images are responsive */
+#hero .carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Center the carousel caption */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Improve carousel button styling */
+.carousel-caption .btn {
+    display: block;
+    margin: 15px auto 0 auto;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.btn-custom {
+    background: linear-gradient(135deg, #012A4A, #007F5F) !important;
+    border: none; 
+    color: white; 
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border-radius: 8px; 
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Button Hover Effect */
+.btn-custom:hover {
+    background: linear-gradient(135deg, #007F5F, #012A4A) !important;
+    transform: scale(1.05); 
+}
+
+
+.about-us {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.about-us h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-us p {
+
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.regional-director-section .card {
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.regional-director-section .director-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.regional-director-section .card-title {
+    font-size: 2.0rem;
+    color: #002147;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.regional-director-section .card-text {
+    font-size: 1.1rem;
+    text-align: justify;
+    padding: 0 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #000000
+}
+
+.regional-director-section .director-info h6 {
+    color: #000000;
+}
+
+.news-articles {
+    background-color: #f8f9fa;
+}
+
+.news-articles h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card {
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+    flex-grow: 1;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background 0.3s ease-in-out;
+    align-self: flex-end;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Infographic Grid */
+
+.infographic-grid img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.infographic-grid img:hover {
+    transform: scale(1.05);
+}
+
+.text-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    width: 100%;
+}
+
+.text-box {
+    max-width: 800px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-box h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.text-box p {
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto; 
+    max-width: 90%;
+}
+
+/* Push the footer to the bottom */
+footer {
+    margin-top: auto;
+}
+
+.custom-footer {
+    background: linear-gradient(135deg, #D9E2E9, #007AAD) !important;
+    padding: 20px 0;
+}
+
+.footer-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.footer-middle img {
+    display: block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    
+}
+
+/* Profile Section */
+.profile {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.profile h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    margin-bottom: 5px;
+}
+
+.profile p {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.5;
+    color: #000000;
+    margin-bottom: 10px;
+    font-style: sans-serif;
+}
+
+.profile1{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.profile1 h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    margin-bottom: 5px;
+}
+/* Ensure the parent container spans the full width */
+.parent-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the image container */
+.image-container, .image-container1, .image-container2{
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure the image itself doesn't exceed the container width */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container3 {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Ensure the image fits within the container */
+.image-container3 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.image-container4 {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.image-container4 img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.responsive-img, .responsive-img1 {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    table-layout: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Fix gap between profile and table */
+.table-container1,
+.table-container2,
+.table-container3,
+.table-container4,
+.table-container5,
+.fishing-table-container {
+    margin-top: -10px;
+    padding-top: 0;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-container1 h3,
+.table-container2 h3,
+.table-container3 h3,
+.table-container4 h3,
+.table-container5 h3,
+.fishing-table-container h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.table-container1 p,
+.table-container2 p,
+.table-container3 p,
+.table-container4 p,
+.table-container5 p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #555;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Adjust table cell formatting */
+.table th, .table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    white-space: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Ensure columns distribute width properly */
+.table th {
+    background-color: #cfe2ff;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Ensures equal spacing */
+.table td {
+    min-width: 120px;
+    max-width: 180px;
+    word-break: break-word;
+}
+
+.major {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.major h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.major p {
+
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+.table-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.fishing-table-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 95%;
+    width: 82%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.fishing-table-container p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+.fishing-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.fishing-table th, .fishing-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.fishing-table th {
+    background-color: #cfe2ff;
+    font-weight: bold;
+    text-align: left;
+}
+
+.fishing-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.dominant {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.dominant h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    font-family: 'Montserrat', sans-serif;
+}
+.dominant p {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Styling for Municipal Boat Registration Section */
+.municipal {
+    padding: 30px 0;
+    background-color: #f8f9fa;
+}
+.municipal h3{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;  
+}
+.municipal p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+.municipal h5{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000 !important;
+}
+
+.commercial {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.commercial h6, .topcommercial h6{
+    font-size: 1.0rem;
+    font-weight: bold;
+    color: #000000 !important;
+    padding: 2px;
+    font-family: 'Montserrat', sans-serif;
+}
+.commercial h5, .topcommercial h5{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000 !important;
+    font-family: 'Montserrat', sans-serif;
+}
+.commercial h4,
+.topcommercial h4 {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #000000;
+    padding: 0.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+.commercial, .topcommercial p {
+
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+/* Chart Container */
+.chart-container {
+    width: 80%;
+    max-width: 900px; 
+    height: 450px; 
+    margin: auto; 
+    position: relative;
+}
+
+/* Ensure Chart Respects Container Size */
+#boatRegistrationChart {
+    width: 100% !important; 
+    height: 100% !important; 
+}
+
+/* Text Styling */
+.text-primary {
+    color: #002147 !important;
+    font-weight: bold;
+}
+
+.marinefisheries{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.marinefisheries h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+.marinefisheries p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.aquaculture-sector{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.aquaculture-sector h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 2%;
+    font-family: 'Monserrat', sans-serif;
+}
+.aquaculture-sector p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family:'Roboto', sans-serif;
+}
+
+.marine-ecosystem{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.marine-ecosystem h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+.marine-ecosystem p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.marine-protected{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.marine-protected h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+.marine-protected p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'roboto', sans-serif;
+}
+
+.image-container5 {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.image-container5 img {
+    width: auto;
+    height: 95vh;
+    max-width: 100%; 
+    object-fit: contain;
+}
+
+/* Container styling */
+.table-container3 {
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Wrapper for better control */
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Table */
+.table-responsive {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+/* Table Header */
+.table thead th {
+    background-color: #001f4d;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Table Cells */
+.table td, 
+.table th {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Striped Row Effect */
+.table-striped tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+/* Bold TOTAL Row */
+.table tbody tr:last-child {
+    background-color: #ffd700;
+}
+
+.protected-areas{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.protected-areas h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+.protected-areas p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family:'Roboto', sans-serif;
+}
+
+.lgu-alliance{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.lgu-alliance h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 2%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.lgu-alliance p{
+    font-size: 1.1rem;
+    text-align: center; 
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px; 
+}
+
+.image-container7 {
+    margin-bottom: 20px; 
+}
+
+/* Mission Vision Section */
+.goals, .vision{
+    background-color: #f8f9fa;
+    padding: 10px 0; 
+    margin-bottom: 5px; 
+}
+
+.goals h2, .vision h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    margin-bottom: 5px; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.goals p, .vision p {
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.4; 
+    color: #000000;
+    margin-bottom: 8px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.goals-objectives{  
+
+    margin-top: -10px;
+       padding-top: 0;
+       max-width: 95%;
+       margin: 0 auto;
+       padding: 20px;
+       background-color: #ffffff;
+       border-radius: 10px;
+       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+       width: 100%;
+       overflow-x: auto;
+       font-family: 'Roboto', sans-serif;
+   }
+   
+.goals-objectives h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    margin-bottom: 5px; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.goals-objectives th{
+    text-align: center;
+    padding: 12px;
+    background-color: #343a40;
+    color: white;
+    font-weight: 500;
+}
+
+.goals-objectives td{
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 12px !important;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 1.0rem;
+    color: #000000;
+    line-height: 1.8;
+}
+
+/*About FMA LOGO*/
+
+.about-fma-logo{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-fma-logo h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    margin-bottom: 5px; 
+}
+
+.about-fma-logo h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.5%;
+    color: #002147;
+    font-family:'Montserrat', sans-serif;
+}
+
+.about-fma-logo p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-fma-logo li{
+    font-size: 1.1rem;
+    text-align: flex;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+/* Resolution */
+section {
+    padding: 50px 0;
+}
+
+/* Management Framework */
+
+.action-framework
+{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.action-framework h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+
+.action-framework h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+
+.action-framework h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.5%;
+    color: #002147;
+    font-family:'Montserrat', sans-serif;
+}
+
+.action-framework p{
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.action-framework h5{
+    font-size: 1.1rem;
+    font-family:'Montserrat', sans-serif;   
+}
+    
+    /* Target all ordered lists inside .action-framework */
+.action-framework ol{
+    list-style-type: decimal;
+    padding-left: 20px; 
+}
+
+/* Style the list items inside ordered lists */
+.action-framework ol li{
+    font-size: 1.1 rem; 
+    line-height: 1.8; 
+    margin-bottom: 5px; 
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style nested ordered lists (Roman numerals, lowercase letters, etc.) */
+.action-framework ol ol{
+    list-style-type: lower-roman;
+    padding-left: 30px;
+}
+
+.action-framework ol ol ol{
+    list-style-type: lower-alpha;
+    padding-left: 40px;
+}
+
+/* Style unordered lists inside ordered lists */
+.action-framework ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.action-framework ul li{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 5px;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-objective-1-1, 
+.table-objective-1-2, 
+.table-objective-1-3, 
+.table-objective-1-4, 
+.table-objective-1-5,
+.table-objective-1-6, 
+.table-objective-1-7, 
+.table-objective-1-8{
+    margin-top: -10px;
+    padding-top: 0;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.table-objective-1-1 th, 
+.table-objective-1-2 th, 
+.table-objective-1-3 th,
+.table-objective-1-4 th,
+.table-objective-1-5 th,
+.table-objective-1-6 th,
+.table-objective-1-7 th,
+.table-objective-1-8 th{
+    background-color: #004085;
+    color: white;
+}
+
+.table-objective-1-1 td, 
+.table-objective-1-2 td, 
+.table-objective-1-3 td,
+.table-objective-1-4 td,
+.table-objective-1-5 td,
+.table-objective-1-6 td,
+.table-objective-1-7 td,
+.table-objective-1-8 td{
+    vertical-align: middle;
+}
+
+/*Objective 2 */
+
+.goal2
+{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.goal2 h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+
+.goal2 h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+.goal2 h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.5%;
+    color: #002147;
+    font-family:'Montserrat', sans-serif;
+}
+
+.goal2 p{
+    font-size: 1.1rem;
+    text-align: center; 
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.goal2 h5{
+    font-size: 1.1rem;
+    font-family:'Montserrat', sans-serif;   
+}
+    
+    /* Target all ordered lists inside .action-framework */
+.goal2 ol{
+    list-style-type: decimal;
+    padding-left: 20px; 
+}
+
+/* Style the list items inside ordered lists */
+.goal2 ol li{
+    font-size: 1.1 rem; 
+    line-height: 1.8; 
+    margin-bottom: 5px;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style nested ordered lists (Roman numerals, lowercase letters, etc.) */
+.goal2 ol ol{
+    list-style-type: lower-roman; 
+    padding-left: 30px;
+}
+
+.goal2 ol ol ol{
+    list-style-type: lower-alpha;
+    padding-left: 40px;
+}
+
+/* Style unordered lists inside ordered lists */
+.goal2 ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.goal2 ul li{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 5px;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-objective-2-1,
+.table-objective-2-2,
+.table-objective-2-3{
+    margin-top: -10px;
+    padding-top: 0;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-objective-2-1 th,
+.table-objective-2-2 th,
+.table-objective-2-3 th{
+    background-color: #004085; 
+    color: white;
+}
+
+.table-objective-2-1 td,
+.table-objective-2-2 td,
+.table-objective-2-3 td{
+    
+    vertical-align: middle;
+}
+
+/* Objective 3 */
+.goal3
+{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+.goal3 h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+
+.goal3 h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+.goal3 h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.5%;
+    color: #002147;
+    font-family:'Montserrat', sans-serif;
+}
+
+.goal3 p{
+    font-size: 1.1rem;
+    text-align: center; 
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.goal3 h5{
+    font-size: 1.1rem;
+    font-family:'Montserrat', sans-serif;   
+}
+    
+    /* Target all ordered lists inside .action-framework */
+.goal3 ol{
+    list-style-type: decimal; 
+    padding-left: 20px; 
+}
+
+/* Style the list items inside ordered lists */
+.goal3 ol li{
+    font-size: 1.1 rem; 
+    line-height: 1.8; 
+    margin-bottom: 5px; 
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style nested ordered lists (Roman numerals, lowercase letters, etc.) */
+.goal3 ol ol{
+    list-style-type: lower-roman; 
+    padding-left: 30px;
+}
+
+.goal3 ol ol ol{
+    list-style-type: lower-alpha; 
+    padding-left: 40px;
+}
+
+/* Style unordered lists inside ordered lists */
+.goal3 ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.goal3 ul li{
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 5px;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-objective-3-1,
+.table-objective-3-2,
+.table-objective-3-3 {
+    margin-top: -10px;
+    padding-top: 0;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-objective-3-1 th,
+.table-objective-3-2 th,
+.table-objective-3-3 th {
+    background-color: #004085; 
+    color: white;
+}
+
+.table-objective-3-1 td,
+.table-objective-3-2 td,
+.table-objective-3-3 td {
+    
+    vertical-align: middle;
+}
+
+.table-container6,
+.table-container7,
+.table-container8,
+.table-container9,
+.table-container10,
+.table-container11,
+.table-container12,
+.table-container13,
+.table-container14,
+.table-container15,
+.table-container16,
+.table-container17,
+.table-container18,
+.table-container19{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: auto; 
+    max-width: 100%; 
+
+}
+
+.implementation p{
+    font-size: 1.1rem;
+    text-align: center; 
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+.implementation h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+
+.table-implementation-1-1{
+    margin-top: -10px;
+    padding-top: 0;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+    font-family: 'Roboto', sans-serif;
+}
+.table-implementation-1-1 th {
+    background-color: #004085; 
+    color: white;
+}
+.table-implementation-1-1 td {
+    
+    vertical-align: middle;
+}
+
+.highlight {
+    background-color: #90ee90 !important; 
+}
+
+/*Resolutions and Policies Section*/
+
+.management-board-resolutions {
+    margin-top: -10px;
+    padding-top: 0;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-x: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table-container-box {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+.management-board-resolutions td {
+    vertical-align: middle !important;
+    text-align: center;
+    padding: 12px !important;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 1.0rem;
+    color: #000000;
+    line-height: 1.8;
+}
+
+.management-board-resolutions th {
+    text-align: center;
+    padding: 12px;
+    background-color: #343a40;
+    color: white;
+    font-weight: 500;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .management-board-resolutions td {
+        padding: 8px !important;
+        font-size: 0.9rem;
+    }
+    
+    .btn-custom-view, 
+    .btn-custom-download {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Resolution and Policies Button */
+
+.btn-custom-view {
+    background-color:#0056b3;
+    border-color: #0056b3;
+    color: #fff;
+}
+.btn-custom-view:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-custom-download {
+    background-color: #198754;
+    border-color: #198754;
+    color: #fff;
+}
+.btn-custom-download:hover {
+    background-color: #20c997;
+    border-color: #20c997;
+}
+
+a.pdf-link {
+    color: #0056b3;  
+    text-decoration: none; 
+    font-weight: 600; 
+}
+
+a.pdf-link:hover {
+    color: #007bff;  
+    text-decoration: underline; 
+}
+
+/* Headings Styling */
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #002147;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .table th, .table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+
+.meetings 
+{
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.meetings h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+
+.meetings p{
+    font-size: 1.0rem;
+    text-align: center; 
+    line-height: 1.8;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.meetings ol{
+    list-style-type: decimal;
+    padding-left: 20px; 
+}
+.meetings li{
+    font-size: 1.0 rem; 
+    line-height: 1.8; 
+    margin-bottom: 5px; 
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.meetings th{
+    background-color: #004085; 
+    color: white;
+}
+.meetings td{
+    vertical-align: middle;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    white-space: normal;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.0rem;
+    color: #000000;
+    line-height: 1.8;
+}
+.meetings th{
+    background-color: #004085; 
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.0rem;
+    color: #000000;
+    line-height: 1.8;
+}
+/* Contact Section */
+
+.contact-banner {
+    padding: 50px 0; 
+    text-align: center;
+}
+
+.contact-banner h1{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #002147;
+    padding: 0.5%;
+    font-family:'Montserrat', sans-serif;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: #ffffff;
+}
+
+.contact-box {
+    background: #f4f4f4;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact-box h3 {
+    color: #5a72a2;
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.contact-details {
+    font-size: 16px;
+    color: #5a72a2;
+    line-height: 2;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: #5a72a2;
+    font-weight: bold;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.contact-details a i {
+    font-size: 20px;
+    color: #4267B2; /* Facebook Blue */
+}
+
+.contact-details a[href*="youtube"] i {
+    color: #FF0000; 
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.overview-list {
+    padding-left: 20px; 
+    margin-top: 10px; 
+}
+
+.ecosystem p{
+    margin-bottom: 5px !important; 
+    line-height: 1.5; 
+    text-align: justify;
+    padding: 5px;
+}

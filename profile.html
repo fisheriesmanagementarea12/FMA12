@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisheries Management Area 12</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+ <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown">
+                        Profile
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="profile.html">FMA-12 Profile</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="mission.html">Mission, Vision, Goals</a></li>
+                        <li><a class="dropdown-item" href="management.html">Management Body</a></li>
+                        <li><a class="dropdown-item" href="sag.html">Scientific Advisory Group</a></li>
+                        <li><a class="dropdown-item" href="twg.html">EAFM Technical Working Group</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="framework.html">Management Framework</a></li>
+                <li class="nav-item"><a class="nav-link" href="resolution.html">Resolution & Policies</a></li>
+                <li class="nav-item dropdown">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="resources.html" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                          <li><a class="dropdown-item" href="annual-reports.html">Annual Reports</a></li>
+                          <li><a class="dropdown-item" href="iuu-fishing-index.html">IUU Fishing Index</a></li>
+                        </ul>
+                      </li>
+                      
+                <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </div>
+    </div>
+</nav>
+
+    
+    <!-- Profile -->
+    <section class="profile py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">The Fisheries Management Area 12</h2>
+            <p> The Fisheries Management Area No. 12 comprises four (4) regions: CALABARZON, MIMAROPA, 
+                Region 5, and Region 6, covering a total area of 3,667,400 hectares. It encompasses the provinces of 
+                Batangas, Quezon, Marinduque, Occidental Mindoro, Oriental Mindoro, Romblon, Masbate, Aklan, 
+                Antique, and Capiz, as well as eighty-five (85) coastal cities and municipalities. The area includes major 
+                fishing grounds such as Balayan Bay, Calatagan Bay (Pagapas), Batangas Bay, Tayabas Bay, Tablas 
+                Strait, Mogpog Pass, Sibuyan Sea, and Southern Sibuyan Sea, which are known to provide various 
+                ecosystem services, such as a significant quantity of fish catch, particularly pelagic fishes. These 
+                services support the livelihood and source of nutrition of the fisherfolk and other stakeholders.</p>
+        </div>
+    </section>
+    
+   <!-- Table Container -->
+<section class="table-container1">
+    <h3 class="text-center mt-4">List of Municipalities and Cities in FMA 12</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-primary">
+                <tr>
+                    <th>Quezon Province</th>
+                    <th>Batangas Province</th>
+                    <th>Occidental Mindoro Province</th>
+                    <th>Oriental Mindoro Province</th>
+                    <th>Marinduque Province</th>
+                    <th>Romblon Province</th>
+                    <th>Masbate Province</th>
+                    <th>Aklan Province</th>
+                    <th>Antique Province</th>
+                    <th>Municipality/City in Capiz Province</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Agdangan</td><td>Balayan</td><td>Abra de Ilog</td><td>Baco</td><td>Boac</td><td>Alcantara</td><td>Aroroy</td><td>Altavas</td><td>Caluya</td><td>Ivisan</td>
+                </tr>
+                <tr>
+                    <td>Catanauan</td><td>Batangas City</td><td>Looc</td><td>Bansud</td><td>Buenavista</td><td>Banton</td><td>Balud</td><td>Batan</td><td></td><td>Roxas</td>
+                </tr>
+                <tr>
+                    <td>General Luna</td><td>Bauan</td><td>Magsaysay</td><td>Bongabong</td><td>Gasan</td><td>Cajidiocan</td><td>Mandaon</td><td>Buruanga</td><td></td><td>Sapi-An</td>
+                </tr>
+                <tr>
+                    <td>Lucena City</td><td>Calaca</td><td>Paluan</td><td>Bulalacao</td><td>Mogpog</td><td>Calatrava</td><td>San Pascual</td><td>Ibajay</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>Macalelon</td><td>Calatagan</td><td>San Jose</td><td>Calapan City</td><td>Santa Cruz</td><td>Concepcion</td><td></td><td>Kalibo</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>Mulanay</td><td>Lemery</td><td></td><td>Gloria</td><td>Torrijos</td><td>Corcuera</td><td></td><td>Makato</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>Padre Burgos</td><td>Lobo</td><td></td><td>Mansalay</td><td></td><td>Ferrol</td><td></td><td>Malay</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>Pagbilao</td><td>Mabini</td><td></td><td>Naujan</td><td></td><td>Looc</td><td></td><td>Nabas</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>Pitogo</td><td>San Juan</td><td></td><td>Pinamalayan</td><td></td><td>Magdiwang</td><td></td><td>New Washington</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>San Francisco</td><td>San Luis</td><td></td><td>Pola</td><td></td><td>Odiongan</td><td></td><td>Numancia</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>Sariaya</td><td>San Pascual</td><td></td><td>Puerto Galera</td><td></td><td>Romblon</td><td></td><td>Tangalan</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>Unisan</td><td>Taal</td><td></td><td>Roxas</td><td></td><td>San Agustin</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td>Tingloy</td><td></td><td>San Teodoro</td><td></td><td>San Andres</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td>San Fernando</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td>San Jose</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td>Santa Fe</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td></td><td></td><td></td><td></td><td></td><td>Santa Maria</td><td></td><td></td><td></td><td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</section>
+
+<section class="image-container mt-5">
+    <img src="img/fmagenmap.jpeg" alt="Descriptive Image" class="responsive-img">
+</section>
+
+            <section class="table-container2">
+                <h3 class="text-center mt-4">Number of coastal municipalities/cities, barangays and coastal length per Province</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped">
+                        <thead class="table-primary">
+                            <tr>
+                                <th>Provinces</th>
+                                <th>No. of Coastal LGU</th>
+                                <th>No. of Coastal Barangays</th>
+                                <th>Coastal Length (km)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Batangas</td><td>13</td><td>155</td><td>247.71</td></tr>
+                            <tr><td>Quezon</td><td>12</td><td>76</td><td>246.7</td></tr>
+                            <tr><td>Marinduque</td><td>6</td><td>61</td><td>161</td></tr>
+                            <tr><td>Occidental Mindoro</td><td>5</td><td>82</td><td>334.8</td></tr>
+                            <tr><td>Oriental Mindoro</td><td>13</td><td>111</td><td>342.45</td></tr>
+                            <tr><td>Romblon</td><td>17</td><td>31</td><td>478.7</td></tr>
+                            <tr><td>Masbate</td><td>4</td><td>55</td><td>No Data</td></tr>
+                            <tr><td>Aklan</td><td>11</td><td>73</td><td>155</td></tr>
+                            <tr><td>Antique</td><td>1</td><td>18</td><td>35</td></tr>
+                            <tr><td>Capiz</td><td>3</td><td>19</td><td>25</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <!-- Major Key  -->
+     <section class="major py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Major Key Fishing Ground</h2>
+                <p> The fishing activities in FMA 12 are primarily concentrated in its key fishing grounds. These fishing 
+                    grounds are crucial sources of fishery resources, including small-pelagic fishes, demersal fishes, 
+                    pelagic tunas, and various invertebrates, which support the livelihoods and provide a source of nutrition 
+                    to almost 150,000 fisherfolks. The Sibuyan Sea covers most of the key fishing ground, followed by 
+                    Tablas Strait and the three large bays, namely Balayan Bay, Batangas Bay, and Tayabas Bay. Table 
+                    2.1 shows the location and area of the critical significant fishing grounds in FMA 12.</p>
+
+                <section class="image-container1">
+                    <img src="img/FMAFishing Ground1.jpeg" alt="Descriptive Image" class="responsive-img1">
+                </section>
+        </div>
+    </section>
+
+    <section class="fishing-table-container">
+        <h3 class="text-center mt-4">FMA 12 Major Key Fishing Ground </h3>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Key Fishing Ground</th>
+                        <th>Area (km²)</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="3"><strong>Seas</strong></td></tr>
+                    <tr><td>Sibuyan Sea</td><td>8127</td><td>Aklan / Masbate / Romblon / Antique / Capiz</td></tr>
+                    
+                    <tr><td colspan="3"><strong>Bays</strong></td></tr>
+                    <tr><td>Balayan Bay</td><td>541</td><td>Batangas / Quezon</td></tr>
+                    <tr><td>Batangas Bay</td><td>187</td><td>Batangas</td></tr>
+                    <tr><td>Tayabas Bay</td><td>2213</td><td>Quezon / Marinduque</td></tr>
+    
+                    <tr><td colspan="3"><strong>Straight</strong></td></tr>
+                    <tr><td>Tablas Straight</td><td>3870</td><td>Marinduque / Occidental Mindoro / Oriental Mindoro / Romblon</td></tr>
+    
+                    <tr><td colspan="3"><strong>Pass</strong></td></tr>
+                    <tr><td>Mogpog Pass</td><td>8</td><td>Marinduque / Quezon</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>    
+
+    <section class ="dominant py-2">
+        <div class="container text-center">
+            <h2 class="mb-4">Dominant Fish Species</h2>
+            <p> The BFAR and NSAP have determined the dominant species in FMA 12 by consolidating the volume of 
+                municipal and commercial fishers' landed catch in the monitored sites of BFAR/NFRDI-NSAP. Sardines,
+                scad, tuna, and mackerel are among the prevalent species.</p>
+        
+                <section class="image-container2">
+                    <img src="img/dominant.png" alt="Descriptive Image" class="responsive-img2">
+
+                </section>
+        </div>
+    </section>
+
+    <section class="municipal py-2">
+        <div class="container text-center">
+            <h2 class="mb-4">Municipal and Commercial Fisheries Sector</h2>
+            <p>Currently, about 150 thousand fisherfolk including the commercial and municipal fisheries, processors,
+                and aquaculture sector are within the FMA based on the data collected by BFAR from the reports of the
+                Local Government Units. In addition, about 31,910 municipal fishing boats were determined by BFAR at
+                the provincial level (Boat Registration System (BoatR), 2022).</p>
+            <p>Municipal fisherfolk use fishing boats usually made of wood, marine plywood, or fiberglass materials
+                traditionally sourced from local suppliers. The typical design is a single hull with bamboo or PVC
+                materials outriggers. In some areas within FMA 12, the model varies depending on the traditional design
+                and the local fishing gear use. For instance, fisherfolks who utilize fish traps or crab pots tend to use a
+                fishing boat with a spacious bow and outrigger for fish trap storage during transport.</p>
+            <p>The typical setting of the fishing ground in FMA 12 consists of reef areas together with adjacent habitats
+                from shoreward to landward within 15km of municipal water. The reef flats are where fish corrals were
+                installed, and reef slopes are areas for handlines and spearfishing. The most common species targeted
+                by fisherfolks are pelagic and demersal reef fishes. In the shallow water are groupers, fusiliers,
+                parrotfishes, and rabbitfish. In the open sea, the most targeted species are scads, neritic tunas, and
+                sardines.</p>
+            <p>The landing site for municipal fisherfolks is nearby beach landing areas, community fish landing centers,
+                and significant landing sites. This area also served as a trading area for fish commodities.
+            </p>
+            <section class="image-container3">
+                <img src="img/FishRMapFMAA12.jpeg" alt="Descriptive Image" class="responsive-img3">
+
+            </section>
+    </div>
+</section>
+            <!-- Municipal Boat Registration Section -->
+<section class="municipal py-2">
+    <div class="container text-center">
+        <h3 class="mt-4 text-primary">Municipal Boat Registration</h3>
+        <h5>Number of Registered Municipal Fishing Boats (BoatR, November 2022)</h5>
+        <h4 class="text-primary"><strong>TOTAL 31,910</strong></h4>
+
+        <!-- Chart Container -->
+        <div class="chart-container">
+            <canvas id="boatRegistrationChart"></canvas>
+        </div>
+    </div>
+</section>   
+
+<section class="commercial py-2">
+    <div class="container text-center">
+        <p>The estimated number of commercial fishing vessels operating in FMA 12 is around 517, as reported
+            by individual BFAR RFOs as of August 2022. The typical commercial fishing gears used in the area
+            include ring net, bag net, drift gillnet, hook and line, and purse seine. According to BFAR data, the ring
+            net is the most commonly used gear in commercial fishing in the region.</p>
+            <h4 class="mt-4 text-primary">Commercial Fishing Vessel and Gear Registration</h4>
+            <h5 class="text-primary">Number of Registered Commercial Fishing Vessel and Gear</h5>
+            <h6 class="text-primary"> BFAR August 2022</h6>
+            
+            <div class="chart-container">
+                <canvas id="commercialFishingChart2"></canvas>
+            </div>
+    </div>
+</section>
+
+
+<section class ="topcommercial py-2">
+    <div class ="container text-center">
+        <h4 class="mt-4 text-primary">Top Commercial Fishing Gear</h4>
+            <h5 class="text-primary">Number of Registered Commercial Fishing Gear in the 10 Provinces in FMA 12</h5>
+            <h6 class="text-primary">BFAR August 2022</h6>
+            <canvas id="fishingGearChart"></canvas>
+    </div>
+</section>
+
+<section class="marinefisheries py-2">
+    <div class="container text-center">
+        <h2>Marine Fisheries Production</h2>
+        <p> Based on the data from the Philippines Statistics Authority, the production volume of municipal marine
+            fisheries in the ten provinces of FMA 12 was recorded at 117,195 metric tons, amounting to Php
+            11,651,641.68. However, this figure is lower than the production volume recorded in the previous three
+            years. The production volume has been declining from 2017 to 2020 in most areas except in Occidental
+            Mindoro and Marinduque. One of the challenges in accurately accounting for the production volume in
+            FMA 12 is the lack of data at the municipal and city levels. At present, fisheries data are only available
+            at the provincial level. Therefore, specific municipalities and cities must be included in the production
+            data to determine the accurate production at the FMA level.</p>
+    </div>
+</section>
+
+<section class="aquaculture-sector py-2">
+    <div class="container text-center">
+        <h2>Aquaculture Sector</h2>
+        <p> The aquaculture sector is a crucial source of employment, income, and livelihoods, particularly in the
+            coastal and inland rural communities of FMA 12. Based on the PSA fisheries statistics, the volume of
+            aquaculture production in 2020 was estimated at 94 thousand tons, with a value of around Php.11
+            billion.</p>
+    </div>
+</section>
+
+<section class="table-container3">
+    <h3 class="text-center mt-4"> Marine and Brackish Aquaculture Production Volume of 10 Provinces in FMA 12</h3>
+    <div class="table-wrapper">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-primary">
+                    <tr>
+                        <th>Province</th>
+                        <th>Marine Fishpen</th>
+                        <th>Marine Fishcage</th>
+                        <th>Brackish Fishpond</th>
+                        <th>Brackish Fishpen</th>
+                        <th>Brackish Fish Cage</th>
+                        <th>Total Production</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Capiz</td><td></td><td>52.4</td><td>45,336.97</td><td></td><td>3.82</td><td>45,393.19</td>
+                    </tr>
+                    <tr>
+                        <td>Quezon</td><td></td><td>362.8</td><td>28,344.60</td><td></td><td></td><td>28,707.40</td>
+                    </tr>
+                    <tr>
+                        <td>Aklan</td><td></td><td>2.32</td><td>15,615.06</td><td>55.94</td><td>6.33</td><td>15,679.65</td>
+                    </tr>
+                    <tr>
+                        <td>Batangas</td><td></td><td></td><td>1,660.09</td><td></td><td></td><td>1,660.09</td>
+                    </tr>
+                    <tr>
+                        <td>Oriental Mindoro</td><td></td><td></td><td>1,316.95</td><td></td><td></td><td>1,316.95</td>
+                    </tr>
+                    <tr>
+                        <td>Masbate</td><td>85.66</td><td></td><td>567.78</td><td></td><td></td><td>653.44</td>
+                    </tr>
+                    <tr>
+                        <td>Occidental Mindoro</td><td>0.22</td><td>0.05</td><td>217.34</td><td></td><td></td><td>217.61</td>
+                    </tr>
+                    <tr>
+                        <td>Antique</td><td></td><td></td><td>147.88</td><td>3.17</td><td></td><td>151.05</td>
+                    </tr>
+                    <tr>
+                        <td>Marinduque</td><td></td><td>0.24</td><td>150.39</td><td></td><td></td><td>150.63</td>
+                    </tr>
+                    <tr>
+                        <td>Romblon</td><td></td><td>0.07</td><td>18.92</td><td></td><td>0.22</td><td>19.84</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>85.88</strong></td>
+                        <td><strong>418.51</strong></td>
+                        <td><strong>93,375.98</strong></td>
+                        <td><strong>59.11</strong></td>
+                        <td><strong>10.37</strong></td>
+                        <td><strong>93,949.85</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="image-container4">
+    <img src="img/FLA.jpeg" alt="Descriptive Image" class="responsive-img4">
+</section>
+
+<section class="marine-ecosystem py-2">
+    <div class="container text-center">
+        <h2>Marine Ecosystem and Habitat</h2>
+        <p> The significant bodies of water in Fisheries Management Areas harbor a vast array of marine life. One
+            of these is the Verde Island Passage, encompassing the provinces of Batangas, Occidental Mindoro,
+            Oriental Mindoro, Marinduque, and Romblon, which has been recognized as the center of marine
+            biodiversity. The Tayabas Bay and Mogpog Pass are also linked to the Verde Island Passage and are
+            abundant with marine life and fishery resources. Additionally, the Sibuyan Sea, which separates the
+            Visayas from the northern Philippine island of Luzon, also boasts an astounding amount of marine life.
+        </p>
+        <p>Based on the best available data, there are 488 species of corals, 5,000 species of clams, snails, and
+            mollusks, 981 species of bottom-living algae, 5 species of sea turtles, and 2,824 species of marine fish
+            in these areas.
+        </p>
+    </div>
+</section>
+
+<section class="marine-protected py-2">
+    <div class="container text-center">
+        <h2>Marine Protected Areas, Fish Sanctuaries and Fishery Reserves</h2>
+        <p> Protected areas are crucial habitats for marine life, including coral reefs, mangrove forests, and
+            seagrass meadows. These areas, such as locally managed MPAs and fish sanctuaries, provide
+            undisturbed spaces for nurturing and breeding of various aquatic organisms. In FMA 12, there are 126 locally managed MPAs, fish sanctuaries, and fishery reserves established in the 46 coastal
+            municipalities and cities.
+        </p>
+    </div>
+</section>
+
+<section class="table-container4">
+    <h3 class="text-center mt-4">List of Fish Sanctuaries and Marine Protected Areas</h3>
+    <div class="table-wrapper">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="table-success">
+                    <tr>
+                        <th>Provinces</th>
+                        <th>Location</th>
+                        <th>Marine Fish Sanctuary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="55"><strong>Batangas</strong></td>
+                        <td rowspan="2">Balayan</td>
+                        <td>Carenahan FS</td>
+                    </tr>
+                    <tr><td>Palipikan Fishery Reserve</td></tr>
+                    <tr>
+                        <td rowspan="6">Batangas City</td>
+                        <td>Verde Island MPA</td>
+                    </tr>
+                    <tr><td>Pulong Bato MPA</td></tr>
+                    <tr><td>Nalayag MPA</td></tr>
+                    <tr><td>San Luis FS</td></tr>
+                    <tr><td>Ilijan MPA</td></tr>
+                    <tr><td>Pagkilatan MPA</td></tr>
+                    <tr>
+                        <td rowspan="6">Bauan</td>
+                        <td>Bauan FS</td>
+                    </tr>
+                    <tr><td>Divers Marine Sanctuary</td></tr>
+                    <tr><td>Portulano Marine Sanctuary</td></tr>
+                    <tr><td>Binukbok Marine Sanctuary</td></tr>
+                    <tr><td>Seammate Marine Sanctuary</td></tr>
+                    <tr><td>Loloc Marine Sanctuary</td></tr>
+                    <tr>
+                        <td>Calaca</td>
+                        <td>Calaca FS</td></tr>
+                    <tr>
+                        <td rowspan="8">Calatagan</td>
+                        <td>B. Silang AR FS</td></tr>
+                    <tr><td>Carretonan FS</td></tr>
+                    <tr><td>Sta. Ana FS</td></tr>
+                    <tr><td>Talisay FS</td></tr>
+                    <tr><td>Tanagan FS</td></tr>
+                    <tr><td>Calatagan Pyramid AR</td></tr>
+                    <tr><td>Quilitisan Seagrass Protected Areas</td></tr>
+                    <tr><td>Palobandera MPA</td></tr>
+                    <tr>
+                        <td rowspan="4">Lemery</td>
+                        <tr><td>Lemery FS AR</td></tr>
+                        <tr><td>Mataas na Bayan MPA</td></tr>
+                        <tr><td>Sinisian West MPA</td></tr>
+                    <tr>
+                        <td rowspan="9">Lobo</td>
+                        <tr><td>Sawang Oloolo FS</td></tr>
+                    <tr><td>Biga FS</td></tr>
+                    <tr><td>Malabrigo FS</td></tr>
+                    <tr><td>Simbahang Bato FS</td></tr>
+                    <tr><td>Malagundi Point FS</td></tr>
+                    <tr><td>Balibago FS</td></tr>
+                    <tr><td>Soloc FS</td></tr>
+                    <tr><td>Banalo FS</td></tr>
+                    <tr><td rowspan="4">Mabini</td>
+                    <td>San Teodoro & Bagalangit FS (Twin Rock Reef)</td></tr>
+                <tr><td>Batomg Buhay FS</td></tr>
+                <tr><td>Arthur's Rock</td></tr>
+                <tr><td>Catheral FS</td></tr>
+
+                    <tr><td rowspan ="11">San Juan</td></tr>
+                    <tr><td>Putting Buhangin FS</td></tr>
+                    <tr><td>Hugom MPA</td></tr>
+                    <tr><td>Catmon MPA</td></tr>
+                    <tr><td>Ticalan MPA</td></tr>
+                    <tr><td>Abung MPA</td></tr>
+                    <tr><td>Calubcub MPA</td></tr>
+                    <tr><td>San Juan Seascape MPA</td></tr>
+                    <tr><td>Imelda FS</td></tr>
+                    <tr><td>Submarine Garden MPA</td></tr>
+                    <tr><td>Laiya Aplaya MPA</td></tr>
+
+                    <tr><td rowspan="2">San Luis</td></tr>
+                    <tr><td>San Luis FS</td></tr>
+
+                    <tr><td rowspan="2">Taal</td></tr>
+                    <tr><td>Butong MPA</td></tr>
+
+                    <tr>
+                        <td rowspan="26"><strong>Quezon</strong></td>
+                        <td rowspan="3">Agdangan</td>
+                        <tr><td>Silangan Calotan FS</td></tr>
+                        <tr><td>Carenahan FS</td></tr>
+
+                    <tr>
+                        <td rowspan="3">Catanauan</td>
+                        <tr><td>Bgy. Ajos FS</td></tr>
+                        <tr><td>Matandang Sabang Kanluran FS</td></tr>
+                    
+                    <tr>
+                        <td rowspan="2">General Luna</td>
+                        <tr><td>Bgy. Bacong Ibaba (Bayas bayas FS)</td></tr>
+                        
+                    <tr>
+                        <td rowspan="3">Lucena</td>
+                        <tr><td>Bgy. Mayao Castillo FS</td></tr>
+                        <tr><td>Barra Ransohan FS</td></tr>
+                    
+                    <tr>
+                        <td rowspan="2">Macalelon</td>
+                        <tr><td>Macalelon FS</td></tr>
+                    
+                    <tr>
+                        <td rowspan="2">Padre Burgos</td>
+                        <tr><td>Danlangan FS</td></tr>
+
+                    <tr>
+                        <td rowspan="3">Pagbilao</td>
+                        <tr><td>Ibabang Pulo FS</td></tr>
+                        <tr><td>Patayan FS</td></tr>
+                    
+                    <tr>
+                        <td rowspan="3">Pitogo</td>
+                        <tr><td>Pacatin/Soliyao FS</td></tr>
+                        <tr><td>Amang Kalaingin FS</td></tr>
+
+                    <tr>
+                        <td rowspan="3">San Francisco</td>
+                        <tr><td>Cawayan FS</td></tr>
+                        <tr><td>Pagsangahan FS</td></tr>
+
+                    <tr>
+                        <td rowspan="2">Sariaya</td>
+                        <tr><td>San Roque FS</td></tr>
+                    
+                     <tr>
+                        <td rowspan="8"><strong>Marinduque</strong></td>
+                        <td rowspan="4">Buenavista</td>
+                        <tr><td>Yook-Libas</td></tr>
+                        <tr><td>Kalangkang</td></tr>
+                        <tr><td>Banot</td></tr>
+
+                    <tr>
+                        <td rowspan="2">Torrijos</td></tr>
+                        <tr><td>Kay Duke</td></tr>
+
+                    <tr>
+                        <td rowspan="2">Gasan</td></tr>
+                        <tr><td>Tres Reyes Reserve</td></tr>
+
+                        <tr>
+                            <td rowspan="2"><strong>Occidental Mindoro</strong></td>
+                            <td rowspan="2">Magsaysay</td>
+                            <tr><td>Alibog FS</td></tr>
+
+                        <tr>
+                            <td rowspan="39"><strong>Oriental Mindoro</strong></td>
+                            <td rowspan="3">Calapan City</td>
+                            <tr><td>Harka Piloto</td></tr>
+                            <tr><td>Silonay Mangrove Conservation Area</td></tr>
+                        
+                        <tr>
+                            <td rowspan="3">San Teodoro</td>
+                            <tr><td>Punta Ilag FS</td></tr>
+                            <tr><td>Tamauyun Reef Fish Sanctuary</td></tr>
+
+                        <tr>
+                            <td rowspan="2">Puerto Galera</td>
+                            <tr><td>San Antonio</td></tr>
+
+                        <tr>
+                            <td rowspan="3">Nauhan</td>
+                            <tr><td>Tujod FS</td></tr>
+                            <tr><td>Masaguing FS</td></tr>
+
+                        <tr>
+                            <td rowspan="7">Pola</td>
+                            <tr><td>Bacawan FS</td></tr>
+                            <tr><td>St. John the Baptist FS</td></tr>
+                            <tr><td>St. Peter the Rock MPA</td></tr>
+                            <tr><td>Stella Mariz FS</td></tr>
+                            <tr><td>Song of the Sea Fish Sanctuary</td></tr>
+                            <tr><td>Kingfisher Fishery Reserve</td></tr>
+
+                        <tr>
+                            <td rowspan="5">Pinamalayan</td>
+                            <tr><td>Ranzo FS</td></tr>
+                            <tr><td>Banilad-Simboryo FS</td></tr>
+                            <tr><td>Banilad-Ginapangan MPA</td></tr>
+                            <tr><td>Pili Marine Protected Area</td></tr>
+                            
+                        <tr>
+                            <td rowspan="4">Gloria</td>
+                            <tr><td>Agsalin FS</td></tr>
+                            <tr><td>Sta. Theresa Fishery Reserve</td></tr>
+                            <tr><td>Tambong Fishery Reserve</td></tr>
+
+                        <tr>
+                            <td rowspan="2">Bongabong</td>
+                            <tr><td>Masaguisi Fish Sanctuary</td></tr>
+
+                        <tr>
+                            <td rowspan="3">Mansalay</td>
+                            <tr><td>Palaypay Cove FS</td></tr>
+                            <tr><td>Allegria Sea Turtle Habitat(Tikling Ponit)</td></tr>
+
+                        <tr>
+                            <td rowspan="2">Roxas</td>
+                            <tr><td>Paclasan Seagrass Protected Area</td></tr>
+
+                        <tr>
+                            <td rowspan="3">Bulalacao</td>
+                            <tr><td>Balatasan FS</td></tr>
+                            <tr><td>Maujao FS</td></tr>
+
+                        <tr>
+                            <td rowspan="2">Bansud</td>
+                            <tr><td>Bansud FS</td></tr>
+
+                            <tr>
+                                <td rowspan="6"><strong>Romblon</strong></td>
+                                <td rowspan="3">Sta. Fe</td>
+                                <tr><td>Guinbirayan FS</td></tr>
+                                <tr><td>Charles Islet FS</td></tr>
+
+                            <tr>
+                                <td rowspan="3">Sta. Maria</td>
+                                <tr><td>Concepcion FS</td></tr>
+                                <tr><td>Parayhog FS</td></tr>
+
+                            <tr>
+                                <td rowspan="18"><strong>Masbate</strong></td>
+                                <td rowspan="5">Aroroy</td>
+                                <tr><td>Matalangtalang MPA</td></tr>
+                                <tr><td>Tangig MPA</td></tr>
+                                <tr><td>Talib MPA</td></tr>
+                                <tr><td>Colorada MPA</td></tr>
+
+                            <tr>
+                                <td rowspan="3">Ibajay</td>
+                                <tr><td>Bugtong Bato Marine FS and Fishery Reserve</td></tr>
+                                <tr><td>Aquino-Ondoy Marine FS and Fisher Reserver</td></tr>
+
+                            <tr>
+                                <td rowspan="2">Batan</td>
+                                <tr><td>Mamboquiao Marine FS and Fishery Reserve</td></tr>
+
+                            <tr>
+                                <td rowspan="3">Buruanga</td>
+                                <tr><td>Bel-is Marine FS and Fishery Reserve</td></tr>
+                                <tr><td>Bagongbayan Marine FS and Fishery Reserve</td></tr>
+
+                            <tr>
+                                <td rowspan="2">Libertad, Nabas</td>
+                                <tr><td>Libertad Marine FS and Fishery Reserve</td></tr>
+                                
+                            <tr>
+                                <td rowspan="3">Tangalan</td>
+                                <tr><td>Tangalan Marine Sanctuary</td></tr>
+                                <tr><td>Jawili Nearshore Marine Sanctuary(Sipak Reef)</td></tr>
+
+                            <tr>
+                                <td rowspan="11"><strong>Antique</strong></td>
+                                <td rowspan="11">Caluya</td>
+                                <tr><td>Hininga-an MPA</td></tr>
+                                <tr><td>Dionela MPA</td></tr>
+                                <tr><td>Bacong MPA</td></tr>
+                                <tr><td>Sabang MPA</td></tr>
+                                <tr><td>Dawis MPA</td></tr>
+                                <tr><td>Masanag MPA</td></tr>
+                                <tr><td>Harigue MPA</td></tr>
+                                <tr><td>Alegria MPA</td></tr>
+                                <tr><td>Tinogboc MPA</td></tr>
+                                <tr><td>Semirara MPA</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <section class="image-container5">
+        <img src="img/location.png" alt="Descriptive Image" class="responsive-img5">
+    </section>
+</section>
+
+</section>
+
+<section class="protected-areas py-2">
+    <div class="container text-center">
+        <h2 class="mb-4">Protected Areas Under NIPAS</h2>
+        <p> There are four important mangrove swamp forests located in Quezon, Marinduque, Oriental Mindoro, 
+            and Romblon provinces that are part of the National Integrated Protected Areas System (NIPAS) 
+            within FMA 12. These protected areas are currently in the initial component stage and have not yet 
+            been fully legislated and proclaimed as protected areas under the E-NIPAS law.</p>
+            <!-- Table Section -->
+        <section class="table-container5">
+        <div class="table-responsive">
+            <table class="table table-bordered text-left">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>NIPAS MPA Name</th>
+                        <th>PA Code</th>
+                        <th>Ecosystem</th>
+                        <th>Category</th>
+                        <th>Area (Ha)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Island of Sta. Cruz and Salomague, foreshoreline of Dapdap and Alabo to the mouth of 
+                            tagum river, Malinao Creek to Salomague Point, foreshoreline of Barrio Cabuyagan to 
+                            eastern side of Dating Bayan River in Calancan Bay</td>
+                        <td>99</td>
+                        <td>Terrestrial</td>
+                        <td>Mangrove Swamp Forest Reserve</td>
+                        <td>2351.4</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>Mangrove areas along banks of Mamburao River, Buluangan River to Lagarum River, 
+                            Naujan, bank of betel Creek, Sablayan pt. to Bagong Sabang River, Labangan to Calalayuan pt. 
+                            Sukol River, Casiliga river, Island of Soguicay </td>
+                        <td>98</td>
+                        <td>Terrestrial</td>
+                        <td>Mangrove Swamp Forest Reserve</td>
+                        <td>997.4</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>Palsabangan River up to Mazintuto river, Bacong River to Sandoval Point </td>
+                        <td>72</td>
+                        <td>Terrestrial</td>
+                        <td>Mangrove Swamp Forest Reserve</td>
+                        <td>866.6</td>
+                        <td>I</td>
+                    </tr>
+                    <tr>
+                        <td>Sibuyan Island MSFR</td>
+                        <td>97</td>
+                        <td>Terrestrial</td>
+                        <td>Mangrove Swamp Forest Reserve</td>
+                        <td>504.7</td>
+                        <td>I</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="image-container6">
+        <img src="img/nipas.png" alt="Descriptive Image" class="responsive-img6">
+    </section>
+    </section>
+    </div>
+</section>
+
+<section class="lgu-alliance py-2">
+    <div class ="container text-center">
+        <h2 class="mb-2">LGU Alliance and Ancestral Domain</h2>
+    
+    <div class="image-container7">
+        <img src="img/lgu.png" alt="Description of Image" class="img-fluid rounded shadow">
+    </div>
+    <p> The five provinces of Batangas, Marinduque, Occidental Mindoro, Oriental Mindoro, and Romblon, 
+        along with national agencies, have allied to strengthen the protection and management of the Verde 
+        Island Passage, considered the epicenter of marine shore fish biodiversity. The Verde Island Passage 
+        Marine Protected Area Network and Law Enforcement Network (VIP MPAN & LEN) aim to ensure the 
+        conservation and protection of the VIP. </p>
+    <p>Meanwhile, the ancestral domain of the Indigenous People is located in the provinces of Romblon and 
+        Aklan. The Indigenous People in the area serve as stewards of the ancestral domain and contribute to 
+        the management of fishery resources.</p>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="custom-footer text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <!-- Left Section: Address -->
+        <div class="footer-left">
+            <p><i class="fas fa-map-marker-alt"></i> Purok 3, Brgy. Bambang, Los Baños, Laguna</p>
+        </div>
+  
+        <!-- Middle Section: Logo -->
+        <div class="footer-middle text-center">
+            <img src="img/Asset 3.svg" alt="Company Logo" height="50">
+        </div>
+  
+        <!-- Right Section: Contact Details -->
+        <div class="footer-right text-end">
+            <p><i class="fas fa-phone"></i> (049) 5448183; (049) 5271266; (049) 5271267</p>
+            <p><i class="fas fa-envelope"></i>frms.4a@bfar.da.gov.ph</p>
+            <p><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/FisheriesManagementArea12" class="text-white">Facebook Page</a></p>
+        </div>
+    </div>
+  </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
